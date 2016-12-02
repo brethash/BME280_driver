@@ -11,6 +11,6 @@ Check out the [wiki](https://github.com/brethash/BME280_driver/wiki) for more in
 `swig -php -outdir ../dist -o ../dist/bme280_wrap.c bme280.i`
 
 ```bash
-gcc 'php-config --includes' -fpic -c ../dist/bme280_wrap.c ../bme280.c
+gcc \`php-config --includes\` -fpic -c ../dist/bme280_wrap.c ../bme280.c
 gcc -shared bme280_wrap.o bme280.o -o ../dist/bme280.so
 ```
